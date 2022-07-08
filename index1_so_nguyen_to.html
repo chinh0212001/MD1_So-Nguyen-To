@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkSoNguyenTo(number) {
+        if (number == 1){
+            return false;
+        } else if (number > 0) {
+            let lag = true;
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    lag = false;
+                }
+            }
+            return lag;
+        } else {
+            return false;
+        }
+
+    }
+    let number = +prompt('nhap so de ktra so nguyen to');
+    console.log(number);
+
+    alert(checkSoNguyenTo(number));
+
+</script>
+</body>
+</html>
